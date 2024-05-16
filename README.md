@@ -16,7 +16,7 @@ A web-based attendance system using TensorFlow.js and FaceAPI.js for face recogn
     git clone https://github.com/kuldeepsharma1/Face-attendance-system.git
     ```
    ```sh
-        cd face-recognition-attendance-system
+    cd face-recognition-attendance-system
      ```
 
 2. **Serve the `index.html` File Locally**:
