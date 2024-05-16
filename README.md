@@ -15,9 +15,9 @@ A web-based attendance system using TensorFlow.js and FaceAPI.js for face recogn
     ```sh
     git clone https://github.com/kuldeepsharma1/Face-attendance-system.git
     ```
-   ```sh
+    ```sh
     cd face-recognition-attendance-system
-     ```
+    ```
 
 2. **Serve the `index.html` File Locally**:
     You can use index.html to access:
@@ -49,7 +49,7 @@ A web-based attendance system using TensorFlow.js and FaceAPI.js for face recogn
 
 - `index.html`: The main HTML file.
 - `app.js`: The JavaScript file containing the face recognition logic.
-- - `face-api.min.js`: The JavaScript file containing the face recognition logic basically library.
+- `face-api.min.js`: The JavaScript file containing the face recognition logic basically library.
 - `models/`: Directory containing the face-api.js models.
 
 ## Dependencies
