@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="face-api.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="app.js"></script>
+    <title>Document</title>
+</head>
+<body class="bg-[#FBEFDD] px-[100px] pt-[80px]">
+    <h1 class="pl-[40px]">
+        <span class="block xl:inline text-[#FBEFDD] text-4xl text-stroke " style="-webkit-text-stroke-width: 1px; -webkit-text-stroke-color: rgb(53, 39, 175);">
+            <span class="font-bold text-slate-400">T</span>oday
+            <span class="font-bold text-slate-400">A</span>ttandance 
+            
+            </h1>
+    <div class="grid grid-cols-2">
+        <div class="mt-[55px] p-[40px] ">
+            <video id="video" width="550" height="500" autoplay muted class="rounded-[40px] shadow-lg"></video>
+          </div> 
+        <div class="relative mt-[80px] shadow-lg w-[550px] h-[450px] rounded-[40px] px-[40px] pt-[80px]">
+         
+                <button id="recognize" class="w-full h-[60px] text-[22px] py-[10px] px-[20px] bg-gray-100 border-[1px] border-gray-300 font-medium rounded-lg border-black mr-[10px] hover:scale-105 hover:shadow-lg mt-[20px]">
+                        
+                        Click for Attandance
+                        
+                    </button>
+                    
+                
+                <p class="text-[14px] mt-[5px]">
+                            *Please put your face front in of webcam.
+                        </p>
+                <div class="absolute bottom-6 right-4">
+                    <button  class=" py-[10px] px-[20px] bg-gray-200 font-medium rounded-lg border-black mr-[10px] hover:scale-105 hover:shadow-lg"><a href="main.html">Home</a></button>
+
+                    <button id="register" class=" py-[10px] px-[20px] bg-gray-200 font-medium rounded-lg border-black mr-[10px] hover:scale-105 hover:shadow-lg  "><a href="register.html">Register Face</a></button>
+                
+                    <button id="export" class=" py-[10px] px-[20px] bg-gray-200 font-medium rounded-lg border-black mr-[10px] hover:scale-105 hover:shadow-lg">Export Attendance</button>
+
+                    
+                </div>
+    </div>
+</body>
+</html>

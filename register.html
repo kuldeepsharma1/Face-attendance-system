@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="face-api.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="app.js"></script>
+    <title>Document</title>
+</head>
+<body class="bg-[#FBEFDD] px-[100px] pt-[80px]">
+    <h1 class="pl-[40px]">
+        <span class="block xl:inline text-[#FBEFDD] text-4xl text-stroke " style="-webkit-text-stroke-width: 1px; -webkit-text-stroke-color: rgb(53, 39, 175);">
+            <span class="font-bold text-slate-400">N</span>ew 
+            <span class="font-bold text-slate-400">S</span>tudent 
+            <span class="font-bold text-slate-400">R</span>egistration</span></h1>
+    <div class="grid grid-cols-2">
+        <div class="mt-[55px] p-[40px] ">
+            <video id="video" width="550" height="500" autoplay muted class="rounded-[40px] shadow-lg"></video>
+          </div> 
+        <div class="relative mt-[80px] shadow-lg w-[550px] h-[450px] rounded-[40px] px-[40px] pt-[80px]">
+            
+                <input type="text" id="name" placeholder="Enter name for registration" class="rounded-lg py-[5px] px-[20px] w-full h-[50px]" /><br>
+                <button id="register" class=" py-[10px] px-[20px] bg-[white] font-medium rounded-lg border-black mr-[10px] hover:scale-105 hover:shadow-lg mt-[20px] ">Register Face</button>
+                
+                <div class="absolute bottom-6 right-4">
+                    <button  class=" py-[10px] px-[20px] bg-gray-200 font-medium rounded-lg border-black mr-[10px] hover:scale-105 hover:shadow-lg"><a href="main.html">Home</a></button>
+                    <button id="recognize" class=" py-[10px] px-[20px] bg-gray-200 font-medium rounded-lg border-black mr-[10px] hover:scale-105 hover:shadow-lg">
+                      <a href="attandance.html">Attandance</a> 
+                    </button>
+                    
+                    <button id="export" class=" py-[10px] px-[20px] bg-gray-200 font-medium rounded-lg border-black mr-[10px] hover:scale-105 hover:shadow-lg">Export Attendance</button>
+
+                </div>
+    </div>
+</body>
+</html>
