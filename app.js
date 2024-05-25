@@ -80,8 +80,12 @@ recognizeButton.addEventListener('click', async () => {
 
 function markAttendance(name) {
     const attendanceRecords = JSON.parse(localStorage.getItem('attendanceRecords')) || [];
-    const date = new Date().toISOString().split('T')[0];
-    attendanceRecords.push({ name: name, date: date });
+   
+    // Format date part
+    const date = new Date().toLocaleDateString('en-IN');
+    // Format time part
+    const time = new Date().toLocaleTimeString('en-IN');
+    attendanceRecords.push({ name: name, date: date ,time: time });
     localStorage.setItem('attendanceRecords', JSON.stringify(attendanceRecords));
 }
 
@@ -89,8 +93,8 @@ const exportButton = document.getElementById('export');
 
 exportButton.addEventListener('click', () => {
     const attendanceRecords = JSON.parse(localStorage.getItem('attendanceRecords')) || [];
-    const csvContent = "data:text/csv;charset=utf-8," 
-        + ["Name,Date"].concat(attendanceRecords.map(record => `${record.name},${record.date}`)).join("\n");
+    const csvContent = "data:text/csv;charset=utf-8,"
+        + ["Name,Date,Time"].concat(attendanceRecords.map(record => `${record.name},${record.date},${record.time}`)).join("\n");
 
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");

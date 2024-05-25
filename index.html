@@ -1,174 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="face-api.min.js"></script>
     <script defer src="app.js"></script>
+    <script defer src="/assets/js/main.js"></script>
     <title>Main Attandance System</title>
 </head>
+
 <body>
-    <div class="grid grid-cols-2  h-full w-full bg-[#FBEFDD] min-h-screen max-h-screen overflow-hidden px-[100px]">
 
-          <div class="mt-[120px] p-[40px]">
-            <div>
-                <h1 class="text-4xl text-center sm:text-left font-extrabold sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl  tracking-wide my-[50px]">
-                    <span class="block xl:inline text-[#FBEFDD] text-7xl text-stroke " style="-webkit-text-stroke-width: 2px; -webkit-text-stroke-color: rgb(53, 39, 175);">
-                    <span class="font-bold text-slate-400">F</span>ace <br />
-                    <span class="font-bold text-slate-400">A</span>ttendance <br />
-                    <span class="font-bold text-slate-400">S</span>ystem</span>
-                </h1>
-                <button id="register" class=" py-[10px] px-[20px] bg-[white] font-medium rounded-lg border-black mr-[10px] hover:scale-105 hover:shadow-lg">
-                    <a href="register.html">Register New Student</a>
-                </button>
-                <button id="recognize" class=" py-[10px] px-[20px] bg-[white] font-medium rounded-lg border-black mr-[10px] hover:scale-105 hover:shadow-lg">
-                    <a href="attandance.html">Attandance</a>
-                </button>
-                
-                <button id="export" class=" py-[10px] px-[20px] bg-[white] font-medium rounded-lg border-black mr-[10px] hover:scale-105 hover:shadow-lg">Export Attendance</button>
+    <header>
+        <!-- Announcement Banner -->
+        <div class="bg-gradient-to-r from-purple-600 to-blue-400">
+            <div class="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 mx-auto">
+                <!-- Grid -->
+                <div class="grid justify-center md:grid-cols-2 md:justify-between md:items-center gap-2">
+                    <div class="text-center md:text-start md:order-2 md:flex md:justify-end md:items-center">
+                        <p class="me-5 inline-block text-sm font-semibold text-white">
+                            Ready to get started?
+                        </p>
+                        <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border-2 border-white text-white hover:border-white/70 hover:text-white/70 disabled:opacity-50 disabled:pointer-events-none"
+                            href="#">
+                            Sign up
+                        </a>
+                    </div>
+                    <!-- End Col -->
 
-                
-                
-            </div>   
-          </div>       
-          <div class=" mt-[110px] ">
-                <svg class="h-[500px] w-[500px] m-auto shadow-lg rounded-[30px]" xmlns="http://www.w3.org/2000/svg" viewBox="280 250 500 500">
-                    <g>
-                        <svg x="360.66" y="301">
-                            <path
-                                d="M172.81 366.06C77.3701 366.06 0 330.949 0 260.246V128.021C0 57.3175 77.3701 0 172.81 0C268.25 0 345.62 57.3175 345.62 128.021V260.246C345.62 330.949 268.25 366.06 172.81 366.06Z"
-                                fill="transparent"
-                            ></path>
-                        </svg>
-                    </g>
-                    <path
-                        id="right-ear"
-                        fill="#E7DCCC"
-                        stroke-width="8px"
-                        d="M732.53,469.08c0,14.78-9.29,26.76-20.75,26.76a15.12,15.12,0,0,1-2.43-.19A190.61,190.61,0,0,0,711.22,469a233.27,233.27,0,0,0-1.6-26.51,15.47,15.47,0,0,1,2.16-.15C723.24,442.32,732.53,454.3,732.53,469.08Z"
-                    ></path>
-                    <path
-                        id="left-ear"
-                        fill="#E7DCCC"
-                        stroke-width="8px"
-                        d="M354.86,495.8c-.39,0-.78,0-1.18,0-11.46,0-20.75-12-20.75-26.76s9.29-26.76,20.75-26.76q.45,0,.9,0A235.55,235.55,0,0,0,353,469,189.63,189.63,0,0,0,354.86,495.8Z"
-                    ></path>
-                    <path
-                        id="right-brow"
-                        fill="gray"
-                        d="M391.67,401.76c24.8-12.75,58.09-15.91,82,0,4.24,2.82,8.19-4,4-6.81-26.29-17.5-62.75-14-90,0-4.51,2.32-.53,9.13,4,6.81Z"
-                    ></path>
-                    <path
-                        id="left-brow"
-                        fill="gray"
-                        d="M676.65,395c-27.21-14-63.66-17.5-90,0-4.2,2.8-.26,9.64,4,6.81,23.91-15.91,57.2-12.75,82,0,4.51,2.32,8.5-4.48,4-6.81Z"
-                    ></path>
-                    <g class="shift" data-v-d8d38ba6="">
-                        <circle
-                            id="right-eye"
-                            cx="440.66"
-                            cy="466.78"
-                            r="20.52"
-                            fill="black"
-                            data-v-d8d38ba6=""
-                        ></circle>
-                        <circle
-                            fill="#fff"
-                            cx="446.89"
-                            cy="456.78"
-                            r="3.78"
-                            data-v-d8d38ba6=""
-                        ></circle>
-                        <circle
-                            id="left-eye"
-                            cx="623.63"
-                            cy="466.78"
-                            r="20.52"
-                            fill="black"
-                            data-v-d8d38ba6=""
-                        ></circle>
-                        <circle
-                            fill="#fff"
-                            cx="629.86"
-                            cy="456.78"
-                            r="3.78"
-                            data-v-d8d38ba6=""
-                        ></circle>
-                    </g>
-            
-                    <path
-                        id="mouth"
-                        stroke="#000"
-                        fill="#F5E3C8"
-                        stroke-miterlimit="10"
-                        stroke-width="5.22px"
-                        d="M577.33,557.49c6.49,0,10.9,5,8.31,9.54-7.72,13.38-29.41,28.57-54.95,28.57s-47.23-15.19-55-28.57c-2.59-4.5,1.82-9.54,8.31-9.54Z"
-                    ></path>
-                    <g>
-                        <path
-                            id="glasses-right"
-                            fill="#fff"
-                            opacity="0.08"
-                            d="M706.51,458.27c0,39.71-30.38,71.9-67.86,71.9S570.8,498,570.8,458.27s30.38-46,67.85-46S706.51,418.55,706.51,458.27Z"
-                        ></path>
-                        <path
-                            id="glasses-left"
-                            fill="#fff"
-                            opacity="0.08"
-                            d="M495.39,458.27c0,39.71-30.38,71.9-67.86,71.9s-67.86-32.19-67.86-71.9,30.38-46,67.86-46S495.39,418.55,495.39,458.27Z"
-                        ></path>
-                        <path
-                            id="glass-frame"
-                            stroke-miterlimit="10"
-                            fill="none"
-                            stroke="#00000a"
-                            stroke-width="6.37px"
-                            d="M493.92,444.51A54.47,54.47,0,0,1,528,432.59h5.77a54.53,54.53,0,0,1,37.83,15.2"
-                        ></path>
-                        <path
-                            id="glass-frame"
-                            stroke-miterlimit="10"
-                            fill="none"
-                            stroke="#00000a"
-                            stroke-width="6.37px"
-                            d="M495.39,458.27c0,39.71-30.38,71.9-67.86,71.9s-67.86-32.19-67.86-71.9,30.38-46,67.86-46S495.39,418.55,495.39,458.27Z"
-                        ></path>
-                        <path
-                            id="glass-frame"
-                            stroke-miterlimit="10"
-                            fill="none"
-                            stroke="#00000a"
-                            stroke-width="6.37px"
-                            d="M706.51,458.27c0,39.71-30.38,71.9-67.86,71.9S570.8,498,570.8,458.27s30.38-46,67.85-46S706.51,418.55,706.51,458.27Z"
-                        ></path>
-                    </g>
-                    <path
-                        id="hair"
-                        fill="black"
-                        d="M647.15,314.18v9a37,37,0,0,1-37,37H456.45a37,37,0,0,1-37-37v-9a36.9,36.9,0,0,1,.56-6.44c1.6-1.16,3.24-2.28,4.89-3.36,29.89-19.6,67-27.18,107.16-27.18,35.63,0,68.84,6,96.74,21a135.92,135.92,0,0,1,18,11.58A35.81,35.81,0,0,1,647.15,314.18Z"
-                    ></path>
-                    <path
-                        id="hair"
-                        fill="black"
-                        d="M427.53,324.22a77.28,77.28,0,0,1-2.3,18.72c-7.41,29.61-32,53.07-63.48,60.78,7-27.26,17.85-53.28,31.81-70.76A133.46,133.46,0,0,1,420,307.74c1.6-1.16,3.24-2.28,4.89-3.36A76.62,76.62,0,0,1,427.53,324.22Z"
-                    ></path>
-                    <path
-                        id="hair"
-                        fill="black"
-                        d="M701.46,400c-30.47-4.17-55.89-22.81-67.91-48.19a77.2,77.2,0,0,1-4.72-53.61,135.92,135.92,0,0,1,18,11.58A133.73,133.73,0,0,1,670.63,333C684,349.64,694.48,374.1,701.46,400Z"
-                    ></path>
-                </svg>
+                    <div class="flex items-center">
+                        <a class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-lg font-medium text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all text-sm"
+                            href="#">
+                            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch demo
+                        </a>
+                        <span class="inline-block border-e border-white/30 w-px h-5 mx-2"></span>
+                        <a class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-lg font-medium text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all text-sm"
+                            href="#">
+                            Explore what's new
+                        </a>
+                    </div>
+                    <!-- End Col -->
+                </div>
+                <!-- End Grid -->
             </div>
-            <style>
-            svg path {
-              stroke: #000000;
-              stroke-width: 2;
-              stroke-dasharray: 1600;
-              stroke-dashoffset: 0;
-              animation: everydayBK 4s 1 linear forwards;
-            }
-            </style>
-    </div>
+        </div>
+        <!-- End Announcement Banner -->
+    </header>
+    <nav>
+        <!-- ========== HEADER ========== -->
+        <div class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
+            <div class="mt-6 relative max-w-[85rem] w-full bg-white border border-gray-200 rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto"
+                aria-label="Global">
+                <div class="flex items-center justify-between">
+                    <a class="flex-none text-xl font-semibold" href="index.html" aria-label="Brand">FaceGuard</a>
+                    <div class="md:hidden">
+                        <button type="button" id="menu-toggle-button"
+                            class="size-8 flex justify-center items-center text-sm font-semibold rounded-full border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+                            aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+                            <svg class="hs-collapse-open:hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="3" x2="21" y1="6" y2="6" />
+                                <line x1="3" x2="21" y1="12" y2="12" />
+                                <line x1="3" x2="21" y1="18" y2="18" />
+                            </svg>
+                            <svg class="hs-collapse-open:block hidden flex-shrink-0 size-4"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 6 6 18" />
+                                <path d="m6 6 12 12" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+                <div id="navbar-collapse-with-animation"
+                    class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7">
+                        <a class="py-3 ps-px sm:px-3 font-medium text-blue-600" href="#" aria-current="page">Landing</a>
+                        <a class="py-3 ps-px sm:px-3 font-medium text-gray-500 hover:text-gray-400" href="#">Account</a>
+                        <a class="py-3 ps-px sm:px-3 font-medium text-gray-500 hover:text-gray-400" href="#">Work</a>
+                        <a class="py-3 ps-px sm:px-3 font-medium text-gray-500 hover:text-gray-400" href="#">Blog</a>
+
+
+                        <a class="flex items-center gap-x-2 font-medium text-gray-500 hover:text-blue-600 md:border-s md:border-gray-300 py-2 md:py-0 md:my-6 md:ps-6"
+                            href="#">
+                            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <main>
+        <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <!-- Grid -->
+            <div class="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
+                <div>
+                    <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight">Initiate
+                        your
+                        journey with <span class="text-green-600">FaceGuard</span></h1>
+                    <p class="mt-3 text-lg text-gray-800">Dedicated to precision and security, our system is curated to
+                        suit
+                        the
+                        needs of any organization, ensuring seamless attendance management.</p>
+
+
+                    <!-- Buttons -->
+                    <div class="mt-7 grid gap-3 w-full sm:inline-flex">
+                        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-black text-white hover:bg-black/80 disabled:opacity-50 disabled:pointer-events-none"
+                            href="register.html">
+                            Get started
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-50">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                            </svg>
+
+                        </a>
+                        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                            href="attandance.html">
+                            Login
+                        </a>
+                    </div>
+                    <!-- End Buttons -->
+
+
+                </div>
+                <!-- End Col -->
+
+                <div class="relative ms-4">
+                    <img src="/assets/face.jpg" class="w-full rounded-lg" alt="FaceGuard">
+                    <div
+                        class="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6">
+                    </div>
+
+                    <!-- SVG-->
+                    <div class="absolute bottom-0 start-0">
+                        <svg class="w-2/3 ms-auto h-auto text-white" width="630" height="451" viewBox="0 0 630 451"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="531" y="352" width="99" height="99" fill="currentColor" />
+                            <rect x="140" y="352" width="106" height="99" fill="currentColor" />
+                            <rect x="482" y="402" width="64" height="49" fill="currentColor" />
+                            <rect x="433" y="402" width="63" height="49" fill="currentColor" />
+                            <rect x="384" y="352" width="49" height="50" fill="currentColor" />
+                            <rect x="531" y="328" width="50" height="50" fill="currentColor" />
+                            <rect x="99" y="303" width="49" height="58" fill="currentColor" />
+                            <rect x="99" y="352" width="49" height="50" fill="currentColor" />
+                            <rect x="99" y="392" width="49" height="59" fill="currentColor" />
+                            <rect x="44" y="402" width="66" height="49" fill="currentColor" />
+                            <rect x="234" y="402" width="62" height="49" fill="currentColor" />
+                            <rect x="334" y="303" width="50" height="49" fill="currentColor" />
+                            <rect x="581" width="49" height="49" fill="currentColor" />
+                            <rect x="581" width="49" height="64" fill="currentColor" />
+                            <rect x="482" y="123" width="49" height="49" fill="currentColor" />
+                            <rect x="507" y="124" width="49" height="24" fill="currentColor" />
+                            <rect x="531" y="49" width="99" height="99" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <!-- End SVG-->
+                </div>
+                <!-- End Col -->
+            </div>
+            <!-- End Grid -->
+        </div>
+    </main>
+    <footer class="mt-auto w-full max-w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto bg-black">
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-5">
+            <div>
+                <a class="flex-none text-xl font-semibold text-white" href="index.html" aria-label="Brand">FaceGuard</a>
+            </div>
+            <!-- End Col -->
+
+            <ul class="text-center ">
+                <li
+                    class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300">
+                    <a class="inline-flex gap-x-2 text-sm text-gray-200 hover:text-gray-100" href="about.html">
+                        About
+                    </a>
+                </li>
+                <li
+                    class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300">
+                    <a class="inline-flex gap-x-2 text-sm text-gray-200 hover:text-gray-100" href="#">
+                        About
+                    </a>
+                </li>
+                <li
+                    class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300">
+                    <a class="inline-flex gap-x-2 text-sm text-gray-200 hover:text-gray-100" href="#">
+                        About
+                    </a>
+                </li>
+            </ul>
+            <!-- End Col -->
+
+            <!-- Social Brands -->
+            <div class="md:text-end space-x-2">
+                <a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                    href="https://hytek.org.in" target="_blank">
+                    <img src="/assets/hytek.png" class="rounded-full w-4 h-4" alt="hytek website logo">
+                </a>
+                <a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                    href="https://x.com/kuldeepit1" target="_blank">
+                    <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                    </svg>
+                </a>
+                <a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                    href="https://github.com/kuldeepsharma1/Face-attendance-system.git" target="_blank">
+                    <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+                </a>
+
+            </div>
+            <!-- End Social Brands -->
+        </div>
+        <!-- End Grid -->
+        <div
+            class="mt-6 md:mt-12 py-3 flex items-center text-sm text-gray-800 gap-x-1.5 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:after:border-neutral-700">
+            <span
+                class="font-semibold bg-clip-text bg-gradient-to-l from-blue-600 to-violet-500 text-transparent dark:from-blue-400 dark:to-violet-400">created
+                by</span>
+            <div class="inline-flex flex-row space-x-2"> <a target="_blank" class="hover:underline" href="https://github.com/kuldeepsharma1">
+                    kuldeep sharma</a>
+                <a class="hover:underline" target="_blank" href="https://github.com/Chan-d-an">chandan kumar</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>
