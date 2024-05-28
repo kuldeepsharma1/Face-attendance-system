@@ -64,5 +64,3 @@ This project is licensed under the GNU License. See the [LICENSE](LICENSE) file 
 ---
 
 **Note**: Ensure that the models are correctly placed in the `/models` directory and paths are correctly set up in your local environment.
-
-**Note**: Create changes and just collaborated
